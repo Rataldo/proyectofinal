@@ -1,0 +1,30 @@
+{% extends 'ReneApp/base.html' %}
+
+{% block title %} Memes {% endblock title %}
+
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memes</title>
+</head>
+<body>
+    <h1>Lista de Memes</h1>
+    <ul>
+        {% for meme in object_list %}
+        <li>
+            <p>subido por: {{ meme.name }}</p>
+            <img src="{{ meme.image.url }}" alt="Meme Image">
+            <p>{{ meme.caption }}</p>
+            <br>
+            <br>
+        </li>
+        {% endfor %}
+    </ul>
+    <br>
+    <br>
+</body>
+</html>
+{% endblock main %}
