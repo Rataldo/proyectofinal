@@ -1,0 +1,26 @@
+{% extends 'ReneApp/base.html' %}
+
+{% load static %}
+
+{% block title %} Login {% endblock title %}
+
+{% block main %}
+    <!-- action: representa la url a la que nos va a re-dirigir. Tiene prioridad
+    por sobre la redirección que podamos colocar en views.py -->
+<section class="py-5">
+    <div class="container my-5">
+        <h2>Login</h2>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Login</button>
+            <br>
+            <br>
+            <a href="{% url 'Registro' %}">Registrate aqui</a>
+            
+
+
+        </form>
+    </div>
+</section>
+{% endblock main %}

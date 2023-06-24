@@ -1,0 +1,39 @@
+{% extends 'ReneApp/base.html' %}
+
+{% load static %}
+
+{% block title %} Update {% endblock title %}
+
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+</head>
+<body>
+    <ul>
+        <br>
+        <h2>Tu Perfil</h2>
+        <br>
+        <p>Datos actuales:</p>
+        <p>Nombre: {{user.first_name }}</p>
+        <p>Apellido: {{user.last_name }}</p>
+        <p>Correo Electronico: {{user.email}}</p>
+        <br>
+        <h3>Actualiza tus datos Aqui</h3>
+        <br>
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Guardar cambios</button>
+        <br>
+        <br>
+        <p><a href="{% url 'update_password' %}">Actualizar Contraseña</a></p>
+    </ul>
+    <br>
+    <br>
+</body>
+</html>
+{% endblock main %}
