@@ -1,0 +1,28 @@
+{% extends 'ReneApp/base.html' %}
+
+{% block title %} Borrar Meme {% endblock title %}
+
+{% block main %}
+    <h1>Borrar Meme</h1>
+    <h5>¿Estás seguro de que quieres borrar este meme?</h5>
+    <br>
+    <br>
+    <ul>
+        <li>
+            <p>Subido por: {{ meme.user.username }}</p>
+            <br>
+            <p>{{ meme.name }}</p>
+            {% if meme.image.width > 500 or meme.image.height > 500 %}
+                <img src="{{ meme.image.url }}" alt="Meme Image" width="500" height="500">
+            {% else %}
+                <img src="{{ meme.image.url }}" alt="Meme Image">
+            {% endif %}
+            <p>{{ meme.caption }}</p>
+            <br>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <button type="submit">Confirmar Borrado</button>
+            </form>
+        </li>
+    </ul>
+{% endblock main %}

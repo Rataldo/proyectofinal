@@ -1,0 +1,27 @@
+{% extends 'ReneApp/base.html' %}
+
+{% block title %} Mis Memes {% endblock title %}
+
+{% block main %}
+    <h1>Mis Memes</h1>
+    <ul>
+        {% for meme in memes %}
+            <li>
+                <p>Subido por: {{ meme.user.username }}</p>
+                <br>
+                <p>{{ meme.name }}</p>
+                {% if meme.image.width > 500 or meme.image.height > 500 %}
+                    <img src="{{ meme.image.url }}" alt="Meme Image" width="500" height="500">
+                {% else %}
+                    <img src="{{ meme.image.url }}" alt="Meme Image">
+                {% endif %}
+                <p>{{ meme.caption }}</p>
+                <br>
+                <a href="{% url 'confirmar-borrado-meme' meme.id %}">Borrar Meme</a> |
+                <a href="{% url 'editar-meme' meme.id %}">Editar Meme</a>
+                <br><br>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock main %}
+
