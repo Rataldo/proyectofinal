@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 from .forms import MemeFormulario, EditarMemeForm
@@ -42,14 +43,19 @@ def mis_memes(request):
     return render(request, 'ReneApp/mis_memes.html', {'memes': memes})
 
 
-#Borrar memes subidos por el usuario
+#borrar meme
 @login_required
 def borrar_meme(request, meme_id):
     meme = get_object_or_404(Meme, id=meme_id, user=request.user)
     if request.method == 'POST':
-        meme.delete()
+        image_path = meme.image.path  
+        meme.delete()  
+        if os.path.exists(image_path):
+            os.remove(image_path)  
         return redirect('mis-memes')
     return render(request, 'ReneApp/borrar_meme.html', {'meme': meme})
+
+
 
 #confirmar borrado
 class ConfirmarBorradoMemeView(LoginRequiredMixin, View):
@@ -59,10 +65,16 @@ class ConfirmarBorradoMemeView(LoginRequiredMixin, View):
 
     def post(self, request, meme_id):
         meme = get_object_or_404(Meme, id=meme_id, user=request.user)
-        meme.delete()
+        image_path = meme.image.path  
+        meme.delete()  
+        if os.path.exists(image_path):
+            os.remove(image_path)  #elimina el archivo de la carpeta /media
         return render(request, 'ReneApp/meme_eliminado.html')
 
 
+#tuve muchos problemas para lograr que se borren los memes de la carpeta /media al borrarlos en la pagina. le pedi ayuda a chat gpt y consulte en stackoverflow
+#despues de mucho logre que esto courra, por lo que ambos bloques superiores tienen mucho codigo y intente tocarlos un poco para que no tengan tanto codigo inesesario
+#pero ya no funcionaba asi que lo dejo como tal porque FUNCIONA asi que no lo quiero romper jajajaj
 
 
 
@@ -82,12 +94,6 @@ def editar_meme(request, meme_id):
 
 
 
-
-
-
-
-
-#clases basadas en vistas:
 
 #ver todos los memes:
 

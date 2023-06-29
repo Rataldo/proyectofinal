@@ -17,15 +17,15 @@
     <ul>
         {% for meme in object_list %}
         <li>
-            <p>subido por: {{ meme.user.username }}</p>
-            <br>
-            <p>{{ meme.name }}</p>
+            <h5>subido por: {{ meme.user.username }}</h5>
+            <p class="lead">{{ meme.name }}</p>
             {% if meme.image.width > 500 or meme.image.height > 500 %}
                 <img src="{{ meme.image.url }}" alt="Meme Image" width="500" height="500">
             {% else %}
                 <img src="{{ meme.image.url }}" alt="Meme Image">
             {% endif %}
             <p>{{ meme.caption }}</p>
+            <p>Fecha de subida: {{ meme.upload_date }}</p>  <!-- fecha de subida de los memes-->
             <br>
             <br>
         </li>
