@@ -91,13 +91,27 @@ contraseña: rataldo20
 
 ## 1. Primer caso
 
-PROXIMAMENTE
+### Un usuario recien registrado quiere agregar un Meme a la pagina:
+
+- el usuario recien registrado debe clickear en la barra superior donde dice "Agregar Memes"
+- al clickear aca sera redirigido a la pagina para agregar memes. solo debe llenar lo solicitado,
+  colocar un Nombre al meme, subir la imagen y una pequeña descripcion.
+- Una vez este subida la imagen el podra revisarlo en la ventana "Ver memes" o tambien
+  puede confirmarlo en la ventana "Mis Memes" donde vera todos los que ha subido ademas de poder
+  borrarlos o editarlos.
+
 
 
 ## 2. Segundo caso
 
-PROXIMAMENTE
+### Usuario se equivoco a la hora de escribir nombre o descripcion de un meme y lo subio con este error:
 
+- El usuario para poder corregir su error debe clickear en la barra superior donde dice: "Mis memes"
+- una vez dentro de esta vista debe buscar entre sus memes el que tiene el error y clickear donde dice: "Editar meme"
+- dentro de "Editar meme" podra cambiar el nombre y descripcion de este, si desea cambiar la imagen debera directamente
+  borrar el meme y volver a subirlo.
+- Una vez el haya corregido su error debera clickear en "Guardar cambios" y podra ver su correccion reflejada en
+  "Mis memes" o tambien en "Ver memes"
 
 ## 3. Tercer Caso
 
