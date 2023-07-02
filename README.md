@@ -2,6 +2,7 @@
 ###  de el curso de Python en Coder House comision 40450
 
 Buenas, soy Rene Aranzaez esta es mi entrega de el proyecto final para el curso de Python hecho en el framework Django.
+
 aqui dejo el link al video explicativo sobre el funcionamiento de mi pagina: https://www.youtube.com/watch?v=_G5fTPTYdMc
 
 **debo mencionar que el link se encuentra oculto por lo que solo se puede acceder por medio de el link, no asi buscando el video directamente en youtube.**
