@@ -115,7 +115,14 @@ contraseña: rataldo20
 
 ## 3. Tercer Caso
 
-PROXIMAMENTE
+### Un usuario considera que su contraseña es muy poco segura, por lo que decide cambiarla:
+
+- El usuario una vez logeado, debe ingresar en su perfil, clickeando en el menu superior en donde aparece su nombre (En este caso Rataldo).
+- una vez en su perfil debe bajar hasta el final de la pagina y clickear donde dice Actualizar Contraseña.
+- En la pagina de invitar contraseña debe colocar su antigua contraseña, y luego la nueva y colocarla 2 veces para confirmar que este bien escrita.
+- debe cumplir con todos los parametros que aparecen sugeridos para poder cambiar su contraseña
+- una vez se haya decidido por su nueva clave, debe clickar en guardar cambios. una vez estos esten guardados. la proxima vez que se deslogee,
+  debera ingresar con su nueva contraseña.
 
 
 
