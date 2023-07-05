@@ -33,12 +33,18 @@ pip install django
 
   ***git clone https://github.com/Rataldo/proyectofinal.git***
 
-4. Con esto tenemos que seleccionar la carpeta en la cual esta el proyecto:
+4. Tambien no tenemos que olvidarnos de instalar pillow:
+```Python
+ pip install pillow  
+```
+esto para poder tener un buen manejo de las imagenes
+
+5. Con esto tenemos que seleccionar la carpeta en la cual esta el proyecto:
 ```Python
 cd proyectofinal
 ```
 
-5. Una vez selecionada podemos correr el proyecto con el siguiente comando:
+6. Una vez selecionada podemos correr el proyecto con el siguiente comando:
 
 ```Python
 python manage.py runserver
@@ -46,7 +52,7 @@ python manage.py runserver
 una vez esta corriendo el servidor clickeamos en el link con la url que aparece o copiamos y pegamos la direccion
 la cual en mi caso local es http://127.0.0.1:8000/
 
-6. Cuando queramos terminar la ejecurcion del servidor solo debemos apretar CTRL+C estando en la terminal. asi terminaremos la ejecucion del servidor.
+7. Cuando queramos terminar la ejecurcion del servidor solo debemos apretar CTRL+C estando en la terminal. asi terminaremos la ejecucion del servidor.
 
 
 
